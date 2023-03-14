@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RecordActionsComponent } from './record-actions.component';
+import { SideBarComponent } from './side-bar.component';
 
-describe('RecordActionsComponent', () => {
-  let component: RecordActionsComponent;
-  let fixture: ComponentFixture<RecordActionsComponent>;
+describe('SideBarComponent', () => {
+  let component: SideBarComponent;
+  let fixture: ComponentFixture<SideBarComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ RecordActionsComponent ]
+      declarations: [ SideBarComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(RecordActionsComponent);
+    fixture = TestBed.createComponent(SideBarComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
