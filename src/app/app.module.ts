@@ -14,6 +14,9 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { TasksComponent } from './tasks/tasks.component';
 import { NotificationsComponent } from './notifications/notifications.component';
 import { GetStartedComponent } from './get-started/get-started.component';
+import { MaterialSearchComponent } from './material-search/material-search.component';
+import { RequestMonitorComponent } from './request-monitor/request-monitor.component';
+import { AppRoutesModule } from './app-routes.module';
 
 @NgModule({
   declarations: [
@@ -23,6 +26,8 @@ import { GetStartedComponent } from './get-started/get-started.component';
     TasksComponent,
     NotificationsComponent,
     GetStartedComponent,
+    RequestMonitorComponent,
+    MaterialSearchComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +36,8 @@ import { GetStartedComponent } from './get-started/get-started.component';
     MatButtonModule,
     MatIconModule,
     MatSidenavModule,
-    MatListModule
+    MatListModule,
+    AppRoutesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
