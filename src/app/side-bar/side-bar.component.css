@@ -1,7 +1,24 @@
-mat-sidenav-container {
-  width: 200px;
+/* mat-sidenav-container {
   height: 100%;
   color: aliceblue;
-  background-color:#040348;
+  
 
 }
+mat-sidenav,mat-sidenav-content{
+  padding:16px;
+
+}
+mat-sidenav{
+
+  width: 200px;
+  color: aliceblue;
+  background-color:#292839;
+}
+
+a{
+  height: auto;
+  width:400px;
+  white-space:normal ;
+  text-decoration: none;
+  
+} */
