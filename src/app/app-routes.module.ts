@@ -6,15 +6,19 @@ import { RequestMonitorComponent } from './request-monitor/request-monitor.compo
 import { GetStartedComponent } from './get-started/get-started.component';
 import { NotificationsComponent } from './notifications/notifications.component';
 import { TasksComponent } from './tasks/tasks.component';
+import { NewCreationComponent } from './new-creation/new-creation.component';
 
 
 
 const appRoutes: Routes = [ 
- { path: '/', component: MaterialSearchComponent },
+ { path: '', redirectTo: '/', pathMatch: 'full' },
+ { path: '', component: MaterialSearchComponent },
  { path: 'creation-requests', component: RequestMonitorComponent },
  { path: 'notifications', component: NotificationsComponent },
  { path: 'tasks', component: TasksComponent },
  { path: 'help', component: GetStartedComponent },
+ { path: 'new-creation', component: NewCreationComponent },
+ { path: '**', redirectTo: '/' } 
 ];
 
 
@@ -22,10 +26,10 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [],
   imports: [RouterModule.forRoot(appRoutes), 
-  ]
+  ],
 
-  // exports: [
-  //   RouterModule 
-  //   ],
+  exports: [
+    RouterModule 
+    ],
 })
 export class AppRoutesModule { }

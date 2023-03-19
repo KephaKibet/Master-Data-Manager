@@ -1,3 +1,7 @@
+mat-toolbar{
+  position: fixed;
+}
+
 .nav-spacer{
   flex: 1 1 auto;
 }
@@ -13,6 +17,11 @@
 
 a:hover{
   color:rgb(192, 192, 243) ;
-background-color: rgb(60, 60, 91);
+  background-color: rgb(60, 60, 91);
 
+}
+
+.active, .current{
+  color:rgb(192, 192, 243) ;
+  background-color: rgb(60, 60, 91);
 }

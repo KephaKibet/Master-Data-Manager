@@ -8,7 +8,6 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
-
 import { SideBarComponent } from './side-bar/side-bar.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { TasksComponent } from './tasks/tasks.component';
@@ -17,6 +16,7 @@ import { GetStartedComponent } from './get-started/get-started.component';
 import { MaterialSearchComponent } from './material-search/material-search.component';
 import { RequestMonitorComponent } from './request-monitor/request-monitor.component';
 import { AppRoutesModule } from './app-routes.module';
+import { NewCreationComponent } from './new-creation/new-creation.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +27,8 @@ import { AppRoutesModule } from './app-routes.module';
     NotificationsComponent,
     GetStartedComponent,
     RequestMonitorComponent,
-    MaterialSearchComponent
+    MaterialSearchComponent,
+    NewCreationComponent
   ],
   imports: [
     BrowserModule,
