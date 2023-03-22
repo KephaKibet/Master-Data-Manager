@@ -1,4 +1,28 @@
-/* .material-search{
-  margin-top:64px;
-  margin-left:200px;
-} */
+h2{
+  display:flex;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.search-results-tittle{
+ display: flex;
+ align-items: center;
+ font-size: 16px;
+ margin-top:50px;
+ 
+
+/* display:flex;
+flex-direction:row;
+justify-content: center; */
+/* padding: 5px 10px;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  /* color: rgb(213, 213, 243); */
+  /* transition: 0.2s ease-in-out;
+  margin-bottom: 24px;
+  margin-top: 5px;  */
+
+
+}
