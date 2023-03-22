@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {MatTableModule} from '@angular/material/table';
 
 import { AppComponent } from './app.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
@@ -38,6 +39,7 @@ import { NewCreationComponent } from './new-creation/new-creation.component';
     MatIconModule,
     MatSidenavModule,
     MatListModule,
+    MatTableModule,
     AppRoutesModule
   ],
   providers: [],
