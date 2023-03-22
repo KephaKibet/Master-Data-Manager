@@ -1,5 +1,6 @@
 mat-toolbar{
   position: fixed;
+  top: 0px;
 }
 
 .nav-spacer{
@@ -20,7 +21,5 @@ a:hover{
 .onHoverTasks{
   visibility: hidden;
 }
-.tasksIcon ~ .onHoverTasks{
-  visibility: visible;
-}
+
 
