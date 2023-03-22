@@ -6,8 +6,6 @@ mat-toolbar{
   flex: 1 1 auto;
 }
 
-
-
 .header{
   text-decoration: none;
   padding: 5px;
@@ -18,10 +16,11 @@ mat-toolbar{
 a:hover{
   color:rgb(192, 192, 243) ;
   background-color: rgb(60, 60, 91);
-
+}
+.onHoverTasks{
+  visibility: hidden;
+}
+.tasksIcon ~ .onHoverTasks{
+  visibility: visible;
 }
 
-.active, .current{
-  color:rgb(192, 192, 243) ;
-  background-color: rgb(60, 60, 91);
-}
