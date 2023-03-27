@@ -4,11 +4,11 @@ h2{
   text-decoration: none;
   margin-left:20px;
 }
+
 .search-component{
 padding-top: 10px;
 margin-top:64px;
 margin-left: 200px;
-
 }
 
 .showcase{
@@ -31,9 +31,12 @@ margin-left: 200px;
 .search-input{
   margin-top: 5px;
   margin-bottom: 10px;
+  padding: 10px;
   height: 40px;
   margin-right:10px;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(187, 190, 253);
+  border-radius: 3px;
+  box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.2);
 }
 
 .search-results-container{
@@ -42,27 +45,33 @@ margin-left: 200px;
   margin-left: 10px;
   margin-right: 20px;
   padding: 10px;
+  width: 80%;
  
 }
 .searchbtn:hover{
+  background-color: rgb(69, 69, 113);
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(255, 255, 255);
+}
+
+.searchbtn{
   color:rgb(192, 192, 243) ;
   background-color: rgb(60, 60, 91);
 }
 
 input{
+  border-radius: 4px;
   height:30px;
+  
   border: solid 1px rgb(209, 209, 255);
 }
 input:focus{
   border: solid 2px rgb(25, 25, 181);
 }
 
-
-
 mat-icon{
   font-weight: bold;
   padding: 5px;
   font-size:28px;
-
  }
 
