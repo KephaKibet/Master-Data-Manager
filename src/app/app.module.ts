@@ -19,6 +19,11 @@ import { RequestMonitorComponent } from './request-monitor/request-monitor.compo
 import { AppRoutesModule } from './app-routes.module';
 import { NewCreationComponent } from './new-creation/new-creation.component';
 
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { AngularFireStorageModule } from '@angular/fire/compat/storage';
+import { firebaseConfig } from '../environments/environment.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,7 +45,12 @@ import { NewCreationComponent } from './new-creation/new-creation.component';
     MatSidenavModule,
     MatListModule,
     MatTableModule,
-    AppRoutesModule
+    AppRoutesModule,
+    AngularFireStorageModule,
+    AngularFirestoreModule,
+    AngularFireStorageModule,
+    AngularFireDatabaseModule,
+    AngularFireModule.initializeApp(firebaseConfig)
   ],
   providers: [],
   bootstrap: [AppComponent]
