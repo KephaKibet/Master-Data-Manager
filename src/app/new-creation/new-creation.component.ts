@@ -9,13 +9,15 @@ import { NgForm} from '@angular/forms';
 })
 export class NewCreationComponent implements OnInit {
 
-  constructor() { }
+  constructor() { 
+    let ERPNumber:string;
+  }
   ngOnInit(): void {
     
   }
   
-  onLogin(loginForm: NgForm) {
-    console.log(loginForm.value);
+  onNewMaterialCreation(newMaterialForm: NgForm) {
+    console.log(newMaterialForm.value);
   }
 
 }
