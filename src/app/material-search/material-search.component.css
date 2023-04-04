@@ -4,6 +4,12 @@ h2{
   text-decoration: none;
   margin-left:20px;
 }
+.section-tittle{
+  padding-right:12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .search-component{
 padding-top: 10px;

@@ -3,7 +3,8 @@
 <div class="showcase">
     <!-- <div class="search-results-container">
     </div> -->
-    <form #newMaterialForm="ngForm" (ngSubmit)="onNewMaterialCreation(newMaterialForm)">
+    <form [FormGroup]="newMaterialForm"
+    (ngSubmit)="onNewMaterialCreation(newMaterialForm)">
         <mat-form-field appearance="outline">
           <mat-label>ERP Number</mat-label>
           <input
@@ -15,9 +16,6 @@
             type="text"
             #descriptor="ngModel"
           />
-          <!-- <mat-error *ngIf="ERPNumber.invalid ">
-            ERPNumber is <strong>required</strong>
-          </mat-error> -->
         </mat-form-field>
         <mat-form-field appearance="outline">
 
