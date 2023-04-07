@@ -1,9 +1,42 @@
 <div class="search-component">
   <h2><mat-icon class="section-tittle">add_task</mat-icon> Material Creation Request</h2>
 <div class="showcase">
+<form (ngSubmit)="onNewMaterialCreation()">
+  <div class="form-group">
+    <label for="ERPNumber">ERP Number</label>
+    <br>
+    <input type="text" name="ERPNumber" class="form-control" ngmodel>
+  </div>
+  <pre></pre>
+  <div class="form-group">
+    <label for="descriptor">Descriptor</label>
+    <br>
+    <input type="text" name="descriptor" class="form-control" ngmodel>
+  </div>
+  <pre></pre>
+  <div class="form-group">
+    <label for="specifications">Specifications ie dimensions, material...</label>
+    <br>
+    <input type="text" name="specifications" class="form-control" ngmodel>
+  </div>
+  <pre></pre>
+  <button
+      class="submitbtn"
+        mat-button
+        type="submit"
+        > 
+        Submit
+  </button>
+</form>
+
+
+
+
+
+
     <!-- <div class="search-results-container">
     </div> -->
-    <form [FormGroup]="newMaterialForm"
+    <!-- <form [FormGroup]="newMaterialForm"
     (ngSubmit)="onNewMaterialCreation(newMaterialForm)">
         <mat-form-field appearance="outline">
           <mat-label>ERP Number</mat-label>
@@ -54,9 +87,7 @@
         type="submit"
         mat-raised-button
         [disabled]="newMaterialForm.invalid"
-      >
-        Submit
-      </button>
-    </form>
-</div>
+      > -->
+        
+  </div>
 </div>

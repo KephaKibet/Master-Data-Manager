@@ -13,36 +13,17 @@ export class NewCreationComponent implements OnInit {
   newMaterialForm: FormGroup = new FormGroup(
     {
       ERPNumbe: new FormControl('', [Validators.required]),
-     descriptor: new FormControl('', [Validators.required, Validators.email]),
+      descriptor: new FormControl('', [Validators.required, Validators.email]),
       specificatiions: new FormControl('', [
         Validators.required,
       ]),
     }
   );
-
-  constructor(
-    private httpClient: HttpClient,
-  ) {}
-
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
   onNewMaterialCreation() {
-    console.log('newMaterialForm', this.newMaterialForm.value);
-
-    this.httpClient
-      .post(
-        'https://master-data-manager-mdm-default-rtdb.firebaseio.com/',
-        this.newMaterialForm.value
-      )
-      .subscribe(
-        (response) => {
-          console.log('response', response);
-          this.newMaterialForm.reset();
-        },
-        (error) => {
-          console.log(error);
-        }
-      );
+    console.log("new Material Form submitted");
+  
   }
 }
 
@@ -62,3 +43,30 @@ export class NewCreationComponent implements OnInit {
 //   }
 
 // }
+
+
+
+// constructor(
+  //   private httpClient: HttpClient,
+  // ) {}
+
+  // ngOnInit(): void {}
+
+  // onNewMaterialCreation() {
+  //   console.log('newMaterialForm', this.newMaterialForm.value);
+
+  //   this.httpClient
+  //     .post(
+  //       'https://master-data-manager-mdm-default-rtdb.firebaseio.com/',
+  //       this.newMaterialForm.value
+  //     )
+  //     .subscribe(
+  //       (response) => {
+  //         console.log('response', response);
+  //         this.newMaterialForm.reset();
+  //       },
+  //       (error) => {
+  //         console.log(error);
+  //       }
+  //     );
+  // }
