@@ -1,23 +1,31 @@
 <div class="search-component">
   <h2><mat-icon class="section-tittle">add_task</mat-icon> Material Creation Request</h2>
 <div class="showcase">
-<form (ngSubmit)="onNewMaterialCreation()">
+<form #newMaterialForm="ngForm" (ngSubmit)="onNewMaterialCreation(newMaterialForm)">
   <div class="form-group">
     <label for="ERPNumber">ERP Number</label>
     <br>
-    <input type="text" name="ERPNumber" class="form-control" ngmodel>
+    <input 
+    type="text" 
+    name="ERPNumber" 
+    class="form-control" 
+    ngmodel 
+    required  
+    matInput 
+    >
+    <!-- <div *ngIf="ERPNumber.touched && ERPNumber.invalid"></div> -->
   </div>
   <pre></pre>
   <div class="form-group">
     <label for="descriptor">Descriptor</label>
     <br>
-    <input type="text" name="descriptor" class="form-control" ngmodel>
+    <input type="text" name="descriptor" class="form-control" ngmodel required matInput>
   </div>
   <pre></pre>
   <div class="form-group">
     <label for="specifications">Specifications ie dimensions, material...</label>
     <br>
-    <input type="text" name="specifications" class="form-control" ngmodel>
+    <input type="text" name="specifications" class="form-control" ngmodel required  matInput >
   </div>
   <pre></pre>
   <button

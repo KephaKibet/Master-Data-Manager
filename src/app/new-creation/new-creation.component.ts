@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {  Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { FormGroup, Validators, FormControl } from '@angular/forms';
+
 
 
 @Component({
@@ -10,19 +11,19 @@ import { FormGroup, Validators, FormControl } from '@angular/forms';
 })
 export class NewCreationComponent implements OnInit {
 
-  newMaterialForm: FormGroup = new FormGroup(
-    {
-      ERPNumbe: new FormControl('', [Validators.required]),
-      descriptor: new FormControl('', [Validators.required, Validators.email]),
-      specificatiions: new FormControl('', [
-        Validators.required,
-      ]),
-    }
-  );
+  // newMaterialForm: FormGroup = new FormGroup(
+  //   {
+  //     ERPNumbe: new FormControl('', [Validators.required]),
+  //     descriptor: new FormControl('', [Validators.required, Validators.email]),
+  //     specificatiions: new FormControl('', [
+  //       Validators.required,
+  //     ]),
+  //   }
+  // );
   ngOnInit(): void { }
 
-  onNewMaterialCreation() {
-    console.log("new Material Form submitted");
+  onNewMaterialCreation(newMaterialForm: any) {
+    console.log(newMaterialForm.value);
   
   }
 }

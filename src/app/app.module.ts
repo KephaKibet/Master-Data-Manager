@@ -57,7 +57,8 @@ import { MatInputModule } from '@angular/material/input';
     AngularFireModule.initializeApp(firebaseConfig),
     FormsModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
