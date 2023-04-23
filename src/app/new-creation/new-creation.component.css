@@ -56,5 +56,21 @@ margin-left: 200px;
   color:rgb(192, 192, 243) ;
   background-color: rgb(60, 60, 91);
 }
+.search-results-container{
+  /* position:fixed; */
+  margin-top:5px;
+  margin-left: 10px;
+  margin-right: 20px;
+  padding: 10px;
+  width: 76vw;
+}
+.form-container{
+  width: 500px;
+  clear: both;
+}
 
+.form-container input{
+  width: 500px;
+  clear: both;
+}
 

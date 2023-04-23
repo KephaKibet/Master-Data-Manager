@@ -1,41 +1,30 @@
 <div class="search-component">
   <h2><mat-icon class="section-tittle">add_task</mat-icon> Material Creation Request</h2>
 <div class="showcase">
-<form #newMaterialForm="ngForm" (ngSubmit)="onNewMaterialCreation(newMaterialForm)">
-  <div class="form-group">
-    <label for="ERPNumber">ERP Number</label>
-    <br>
-    <input 
-    type="text" 
-    name="ERPNumber" 
-    class="form-control" 
-    ngmodel 
-    required  
-    matInput 
-    >
-    <!-- <div *ngIf="ERPNumber.touched && ERPNumber.invalid"></div> -->
-  </div>
-  <pre></pre>
-  <div class="form-group">
-    <label for="descriptor">Descriptor</label>
-    <br>
-    <input type="text" name="descriptor" class="form-control" ngmodel required matInput>
-  </div>
-  <pre></pre>
-  <div class="form-group">
-    <label for="specifications">Specifications ie dimensions, material...</label>
-    <br>
-    <input type="text" name="specifications" class="form-control" ngmodel required  matInput >
-  </div>
-  <pre></pre>
-  <button
-      class="submitbtn"
+  <div class="search-results-container">
+  <form [formGroup]="newMaterialForm" class="form-container">
+      <mat-label>ERP Number</mat-label>
+            <mat-form-field class="full-width" appearance="outline">
+              <input formControlName="ERPNumber" matInput placeholder="ERP Number">
+            </mat-form-field>
+            <mat-label>Descriptor</mat-label>
+            <mat-form-field class="full-width" appearance="outline">
+              <input  formControlName="descriptor" matInput placeholder="Enter Descriptor i.e Bearing, Shaft">
+            </mat-form-field>
+            <mat-label>Specifications</mat-label>
+            <mat-form-field class="full-width" appearance="outline">
+              <textarea  formControlName="specifications" matInput placeholder="Enter material specifications ie lenghth, diameter, make..."></textarea>
+            </mat-form-field>
+        <button (click)="submitForm()"
+        color="primary"
+        class="submitbtn"
         mat-button
         type="submit"
-        > 
-        Submit
-  </button>
+         >
+         Submit</button>
 </form>
+</div>
+</div>
 
 
 
@@ -97,5 +86,5 @@
         [disabled]="newMaterialForm.invalid"
       > -->
         
-  </div>
+
 </div>

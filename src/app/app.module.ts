@@ -26,8 +26,9 @@ import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 import { firebaseConfig } from '../environments/environment.module';
 import { HttpClientModule } from '@angular/common/http';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
+import { MatCardModule } from '@angular/material/card';
 @NgModule({
   declarations: [
     AppComponent,
@@ -58,6 +59,8 @@ import { MatInputModule } from '@angular/material/input';
     FormsModule,
     MatFormFieldModule,
     MatInputModule,
+    ReactiveFormsModule,
+    MatCardModule 
     
   ],
   providers: [],
