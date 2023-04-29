@@ -92,6 +92,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "Master-Data-Manager:build:production",
+            "firebaseProject": "master-data-manager-mdm",
+            "firebaseHostingSite": "master-data-manager-mdm"
+          }
         }
       }
     }

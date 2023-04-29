@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "master-data-manager-mdm"
+  },
+  "targets": {
+    "master-data-manager-mdm": {
+      "hosting": {
+        "Master-Data-Manager": [
+          "master-data-manager-mdm"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
