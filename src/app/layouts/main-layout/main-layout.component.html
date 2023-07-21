@@ -1,0 +1,65 @@
+<!-- nav bar -->
+<mat-toolbar class="mat-elevation-z4">
+    <span class="header">
+        <mat-icon>dataset</mat-icon> Master Data Manager
+    </span>
+
+    <div class="nav-spacer"></div>
+
+    <a mat-button routerLink="/tasks">
+        <mat-icon>view_list</mat-icon>
+    </a>
+    <a mat-button routerLink="/help">
+        <mat-icon>info</mat-icon>
+    </a>
+    <a mat-button routerLink="/notifications">
+        <mat-icon>notifications</mat-icon>
+    </a>
+</mat-toolbar>
+
+<div class="main-layout">
+    <router-outlet></router-outlet>
+</div>
+
+
+<!-- sidebar -->
+<ul>
+    <li routerLinkActive="active current"><a routerLinkActive="active current" routerLink="">
+            <span>
+                <mat-icon>search</mat-icon>
+            </span>
+            <span> Material Catalogue Search</span>
+        </a>
+    </li>
+
+    <li><a routerLink="/creation-requests">
+            <span>
+                <mat-icon>query_stats</mat-icon>
+            </span>
+            <span> Material Request Monitor</span>
+        </a>
+    </li>
+    <li><a routerLink="/new-creation">
+            <span>
+                <mat-icon>add_task</mat-icon>
+            </span>
+            <span> Material Creation Request</span>
+        </a>
+    </li>
+    <li><a routerLink="/batch-creation">
+            <span>
+                <mat-icon>post_add</mat-icon>
+            </span>
+            <span>Batch Material Creation</span>
+        </a>
+    </li>
+</ul>
+
+<div class="main-layout">
+    <router-outlet></router-outlet>
+</div>
+
+<!-- RENDER MAIN LAYOUTS -->
+<div class="main-layout">
+    <router-outlet></router-outlet>
+</div>
