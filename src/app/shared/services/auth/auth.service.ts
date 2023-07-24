@@ -5,6 +5,7 @@ import { setAuthAction } from 'src/app/STATE/auth/auth.actions';
 import { Router } from '@angular/router';
 import { LoginInterface } from '../../interfaces/login.interface';
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -16,8 +17,8 @@ export class AuthService {
   ) { }
 
   login(user: LoginInterface){
-    const storedEmail = 'kk@gmail.com';
-    const storedPassword ='Password';
+    // const storedEmail = 'kk@gmail.com';
+    // const storedPassword ='Password';
 
 
     // save the user to state and Local storage

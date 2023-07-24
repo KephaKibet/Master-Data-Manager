@@ -4,6 +4,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MaterialSearchRoutingModule } from './materialSearch-routing.module';
 import { MaterialSearchComponent } from './components/material-search.component';
 import { MatIconModule } from '@angular/material/icon';
+import {MatTableModule} from '@angular/material/table'
 
 @NgModule({
   declarations: [
@@ -13,7 +14,7 @@ import { MatIconModule } from '@angular/material/icon';
   imports: [
     CommonModule,
     MaterialSearchRoutingModule,
-    ReactiveFormsModule,MatIconModule
+    ReactiveFormsModule,MatIconModule,MatTableModule,
   ]
 })
 export class MaterialSearchModule { }

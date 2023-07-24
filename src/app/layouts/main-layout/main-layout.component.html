@@ -17,14 +17,9 @@
     </a>
 </mat-toolbar>
 
-<div class="main-layout">
-    <router-outlet></router-outlet>
-</div>
-
-
 <!-- sidebar -->
 <ul>
-    <li routerLinkActive="active current"><a routerLinkActive="active current" routerLink="">
+    <li><a routerLinkActive="active " routerLink="/material-search">
             <span>
                 <mat-icon>search</mat-icon>
             </span>
@@ -32,14 +27,14 @@
         </a>
     </li>
 
-    <li><a routerLink="/creation-requests">
+    <li><a routerLink="/request-monitor">
             <span>
                 <mat-icon>query_stats</mat-icon>
             </span>
             <span> Material Request Monitor</span>
         </a>
     </li>
-    <li><a routerLink="/new-creation">
+    <li><a routerLink="/create">
             <span>
                 <mat-icon>add_task</mat-icon>
             </span>

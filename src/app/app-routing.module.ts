@@ -1,15 +1,3 @@
-
-// const appRoutes: Routes = [ 
-//  { path: '', redirectTo: '/', pathMatch: 'full' },
-//  { path: '', component: MaterialSearchComponent },
-//  { path: 'creation-requests', component: RequestMonitorComponent },
-//  { path: 'notifications', component: NotificationsComponent },
-//  { path: 'tasks', component: TasksComponent },
-//  { path: 'help', component: GetStartedComponent },
-//  { path: 'new-creation', component: NewCreationComponent },
-//  { path: '**', redirectTo: '/' } 
-// ];
-
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthLayoutComponent } from './layouts/auth-layout/auth-layout.component';
@@ -20,24 +8,21 @@ import { LoginGuard } from './shared/guards/login/login.guard';
 
 
 const routes: Routes = [
-
 {
   path:'',
     component: MainLayoutComponent,
     canActivate: [AuthGuard],
-    children:[
-    {
-      path:'',
-      redirectTo:'/material-search',
-      pathMatch: 'full',
-    },
-
+    children: [
+      {
+        path: '',
+        redirectTo:'/material-search',
+        pathMatch: 'full',
+      },
     // material-search
     {
       path:'material-search',
       loadChildren: () => import('./modules/material-search/materialSearch.module').then((m) => m.MaterialSearchModule),
     },
-
     // requestMonitor
     {
       path:'request-monitor',
@@ -60,7 +45,8 @@ const routes: Routes = [
       {
         path: 'create',
         loadChildren: () => import('./modules/new-creation/newCreation.module').then((m) => m.NewCreationModule),
-      }
+      },
+  
       ]
 },
 
@@ -80,7 +66,7 @@ children:[
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  imports:[RouterModule.forRoot(routes)],
+  exports:[RouterModule]
 })
 export class AppRoutingModule { }

@@ -4,9 +4,14 @@ import { MaterialSearchComponent } from './components/material-search.component'
 
 const routes: Routes = [
   {
+  path: '',
+  redirectTo:'/material-search',
+  pathMatch: 'full',
+},
+  {
     path:'',
     component: MaterialSearchComponent,
-  }
+  },
 ];
 
 @NgModule({
