@@ -5,6 +5,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { NewCreationComponent } from './components/new-creation.component';
 import { NewCreationRoutingModule } from './newCreation-routing.module';
 import { MatIconModule } from '@angular/material/icon';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,7 @@ import { MatIconModule } from '@angular/material/icon';
   imports: [
     CommonModule,
     NewCreationRoutingModule,
-    ReactiveFormsModule,MatIconModule
+    ReactiveFormsModule,MatIconModule,MatFormFieldModule
   ]
 })
 export class NewCreationModule { }

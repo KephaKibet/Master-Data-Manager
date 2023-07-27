@@ -17,11 +17,10 @@ loginForm: FormGroup = new FormGroup({
 });
 
 constructor(
-  private authService:AuthService,
-){
-
+  private authService: AuthService,
+) {
+    
 }
-
 
 // submit login data
 submit(){

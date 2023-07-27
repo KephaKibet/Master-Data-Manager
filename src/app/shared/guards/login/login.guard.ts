@@ -13,7 +13,7 @@ export class LoginGuard implements CanActivate {
 
   // if user is  logged in, take them to the movies page
     if(userIsLoggedIn){
-      this.router.navigate(['/movies']);
+      this.router.navigate(['/material-search']);
     }
     return !userIsLoggedIn;
   }

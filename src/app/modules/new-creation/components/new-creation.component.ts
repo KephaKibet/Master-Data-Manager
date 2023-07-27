@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 
 
+
 @Component({
   selector: 'mdm-new-creation',
   templateUrl: './new-creation.component.html',
@@ -10,11 +11,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewCreationComponent  {
 
-//   ERPNumber: string ='';
-//   descriptor: string='';
-//   specification: string='';
-//   state: string='';
-//   createdAt: string='';
+  ERPNumber: string ='';
+  descriptor: string='';
+  specification: string='';
+  state: string='';
+  createdAt: string='';
 
  
 
@@ -28,17 +29,17 @@ export class NewCreationComponent  {
 
 //   getAllMaterials() {
 
-//     // this.data.getAllMaterials().subscribe(res => {
+//     this.data.getAllMaterials().subscribe(res => {
 
-//     //   this.materialsList = res.map((e: any) => {
-//     //     const data = e.payload.doc.data();
-//     //     data.ERPNumber = e.payload.doc.ERPNumber;
-//     //     return data;
-//     //   })
+//       this.materialsList = res.map((e: any) => {
+//         const data = e.payload.doc.data();
+//         data.ERPNumber = e.payload.doc.ERPNumber;
+//         return data;
+//       })
 
-//     // }, err => {
-//     //   alert('Error while fetching material data');
-//     // })
+//     }, err => {
+//       alert('Error while fetching material data');
+//     })
 
 //   }
 
@@ -50,11 +51,11 @@ export class NewCreationComponent  {
 //     this.createdAt= ''
 //   }
 
-//   addMaterial() {
-//     if (this.ERPNumber == ''||this.descriptor == ''  || this.specification == '') {
-//       // alert('Fill all input fields');
-//       // return;
-//     }
+  addMaterial() {
+    if (this.ERPNumber == ''||this.descriptor == ''  || this.specification == '') {
+      // alert('Fill all input fields');
+      // return;
+    }
 
 //     this.materialObj.ERPNumber = this.ERPNumber;
 //     this.materialObj.specification = this.specification;
@@ -81,9 +82,9 @@ export class NewCreationComponent  {
   //   specifications: [''],
   // });
  
-//   submitForm() {
-//     console.log('Form data is ', this.newMaterialForm.value);
-
+  // submitForm() {
+  //   console.log('Form data is ', this.newMaterialForm.value);
+  }
 //     this.httpClient
 //       .post(
 //         'https://master-data-manager-mdm-default-rtdb.firebaseio.com/',
@@ -101,23 +102,23 @@ export class NewCreationComponent  {
 
 
 
-// 
+
 
   // onNewMaterialCreation() {
   //   console.log('newMaterialForm', this.newMaterialForm.value);
 
-  //   this.httpClient
-  //     .post(
-  //       'https://master-data-manager-mdm-default-rtdb.firebaseio.com/',
-  //       this.newMaterialForm.value
-  //     )
-  //     .subscribe(
-  //       (response) => {
-  //         console.log('response', response);
-  //         this.newMaterialForm.reset();
-  //       },
-  //       (error) => {
-  //         console.log(error);
-  //       }
-  //     );
+//     this.httpClient
+//       .post(
+//         'https://master-data-manager-mdm-default-rtdb.firebaseio.com/',
+//         this.newMaterialForm.value
+//       )
+//       .subscribe(
+//         (response) => {
+//           console.log('response', response);
+//           this.newMaterialForm.reset();
+//         },
+//         (error) => {
+//           console.log(error);
+//         }
+//       );
   }

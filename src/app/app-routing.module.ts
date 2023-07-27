@@ -54,6 +54,7 @@ const routes: Routes = [
 path:'',
 component:AuthLayoutComponent,
 canActivate: [LoginGuard],
+
 children:[
    // LOGIN
    {

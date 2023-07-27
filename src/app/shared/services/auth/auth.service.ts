@@ -25,6 +25,7 @@ export class AuthService {
     this.saveUser(user);
 
     // notify user they're logged in
+    // **toaster notification
 
     // redirect user to home page
     this.router.navigate(['/material-search']);
