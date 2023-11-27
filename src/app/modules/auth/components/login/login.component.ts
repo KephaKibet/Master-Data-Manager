@@ -17,13 +17,11 @@ loginForm: FormGroup = new FormGroup({
 });
 
 constructor(
-  private authService: AuthService,
+  // private authService: AuthService,
 ) {
     
 }
 
 // submit login data
-submit(){
-  this.authService.login(this.loginForm.value);
-}
+submit(){}
 }

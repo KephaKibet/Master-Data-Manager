@@ -2,8 +2,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthLayoutComponent } from './layouts/auth-layout/auth-layout.component';
 import { MainLayoutComponent } from './layouts/main-layout/main-layout.component';
-import { AuthGuard } from './shared/guards/auth/auth.guard';
-import { LoginGuard } from './shared/guards/login/login.guard';
 
 
 
@@ -11,7 +9,7 @@ const routes: Routes = [
 {
   path:'',
     component: MainLayoutComponent,
-    canActivate: [AuthGuard],
+    // canActivate: [AuthGuard],
     children: [
       {
         path: '',
@@ -26,7 +24,7 @@ const routes: Routes = [
     // requestMonitor
     {
       path:'request-monitor',
-      canActivate: [AuthGuard],
+      // canActivate: [AuthGuard],
       loadChildren: () => import('./modules/request-monitor/requestMonitor.module').then((m) => m.RequestMonitorModule),
     },
 
@@ -53,7 +51,7 @@ const routes: Routes = [
 {
 path:'',
 component:AuthLayoutComponent,
-canActivate: [LoginGuard],
+// canActivate: [LoginGuard],
 
 children:[
    // LOGIN
