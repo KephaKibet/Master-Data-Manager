@@ -3,12 +3,12 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Master-Data-Manager": {
+    "master-data-manager": {
       "projectType": "application",
       "schematics": {},
       "root": "",
       "sourceRoot": "src",
-      "prefix": "mdm",
+      "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -25,7 +25,6 @@
               "src/assets"
             ],
             "styles": [
-              "src/custom-theme.scss",
               "src/styles.css"
             ],
             "scripts": []
@@ -61,10 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "Master-Data-Manager:build:production"
+              "browserTarget": "master-data-manager:build:production"
             },
             "development": {
-              "browserTarget": "Master-Data-Manager:build:development"
+              "browserTarget": "master-data-manager:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -72,7 +71,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "Master-Data-Manager:build"
+            "browserTarget": "master-data-manager:build"
           }
         },
         "test": {
@@ -92,21 +91,11 @@
             ],
             "scripts": []
           }
-        },
-        "deploy": {
-          "builder": "@angular/fire:deploy",
-          "options": {
-            "prerender": false,
-            "ssr": false,
-            "browserTarget": "Master-Data-Manager:build:production",
-            "firebaseProject": "master-data-manager-mdm",
-            "firebaseHostingSite": "master-data-manager-mdm"
-          }
         }
       }
     }
   },
   "cli": {
-    "analytics": "8702f5ef-2bce-4981-bc31-b054d2b516ee"
+    "analytics": "aff4413b-a9a1-4ccf-a502-d3dd543ef748"
   }
 }
