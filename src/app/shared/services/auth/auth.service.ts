@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { LoginInterface } from '../../../interfaces/login.interface';
+import { LoginInterface } from '../../interfaces/login.interface';
 import { NotificationService } from '../notification/notification.service';
 
 @Injectable({
