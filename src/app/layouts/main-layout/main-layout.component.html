@@ -7,13 +7,13 @@
   <div class=" nav-spacer"></div>
 
   <a mat-button routerLink="/tasks">
-    <mat-icon>view_list</mat-icon>
+    <mat-icon class="mat-icon">view_list</mat-icon>
   </a>
   <a mat-button routerLink="/get-started">
-    <mat-icon>info</mat-icon>
+    <mat-icon class="mat-icon">info</mat-icon>
   </a>
   <a mat-button routerLink="/notifications">
-    <mat-icon>notifications</mat-icon>
+    <mat-icon class="mat-icon">notifications</mat-icon>
   </a>
   <a mat-button routerLink="/account-settings">
     account settings
@@ -23,9 +23,9 @@
 
 <!-- sidebar -->
 <ul>
-  <li><a routerLinkActive="active " routerLink="/material-catalogue-search">
+  <li><a routerLinkActive="active" routerLink="/material-catalogue-search">
       <span>
-        <mat-icon>search</mat-icon>
+        <mat-icon class="nav-icon">search</mat-icon>
       </span>
       <span> Material Catalogue Search</span>
     </a>
@@ -33,14 +33,14 @@
 
   <li><a routerLink="/request-monitor">
       <span>
-        <mat-icon>query_stats</mat-icon>
+        <mat-icon class="nav-icon">query_stats</mat-icon>
       </span>
       <span> Material Request Monitor</span>
     </a>
   </li>
   <li><a routerLink="/material-creation">
       <span>
-        <mat-icon>add_task</mat-icon>
+        <mat-icon class="nav-icon">add_task</mat-icon>
       </span>
       <span> Material Creation Request</span>
     </a>
@@ -55,6 +55,10 @@
 </ul>
 
 <!-- RENDER MAIN LAYOUTS -->
-<div class="main-layout">
-  <router-outlet></router-outlet>
-</div>
+
+<body>
+  <div class="main-layout">
+    <router-outlet></router-outlet>
+  </div>
+
+</body>

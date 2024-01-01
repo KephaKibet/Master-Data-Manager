@@ -1,16 +1,14 @@
 /* nav bar */
 body{
-  background-color: #F0FEFF;
+  background-color:#F0FEFF; 
 }
-
 mat-toolbar{
+  background-color: #ffffff;
   position: fixed;
   top: 0px;
   height: 64px;
-}
-
-.mat-elevation-z4{
   box-shadow:0px 1px 3px  rgb(60, 60, 91);
+  z-index: 1000;
 }
 
 .nav-spacer{
@@ -57,37 +55,35 @@ ul{
   margin-top: 5px;
  }
  a:hover, a:active{
-  background-color: #414064;
+  background-color:#595884;
   color: rgb(255, 255, 255);
-  border: 1px solid rgb(255, 255, 255);
+  border-radius: 10%;
+  max-width: 85%;
+  margin-left: 3px;
+  transform: scale(115%);
+  transition: cubic-bezier(0.6,1, 0.98, 0.335);
+ 
  }
 
+ .nav-icon{
+  color:  rgb(255, 255, 255);
+ }
+
+ mat-icon :hover{
+  background-color: #414064;
+  color:  rgb(255, 255, 255);
+ }
  mat-icon{
-  color: #00bac1;
   border-radius:10%;
   padding:5px;
   font-size:16px;
   display: flex;
   align-items: center;
-
  }
  .main-layout{
 	margin-top: 64px;
 	margin-left: 235px;
 }
-
- /* .example-container {
-  display: flex;
-  flex-direction: column;
-  max-height: 500px;
-  min-width: 300px;
-}
-
-.mat-table {
-  overflow: auto;
-  max-height: 500px;
-}
-  */
 
 
 
