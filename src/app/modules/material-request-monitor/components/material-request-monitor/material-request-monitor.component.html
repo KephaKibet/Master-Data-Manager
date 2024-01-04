@@ -1,16 +1,67 @@
-<div class="search-component">
-  <h2>
-    <mat-icon class="section-tittle">query_stats</mat-icon> Material Request Monitor
-  </h2>
-  <div class="showcase">
-
+<body>
+  <div class="component-container">
+    <div class="component-tittle">
+      <h2>
+        <mat-icon>query_stats</mat-icon> Material Request Monitor
+      </h2>
+    </div>
+    <!-- <div class="showcase"> -->
     <div class="search-results-container">
-      <div class="search-input">
-        <form action="submit">
-          <input type="text" placeholder="Search">
-          <button class="searchbtn" mat-button>
-            <mat-icon>search</mat-icon> Search
-          </button>
-        </form>
+      <div class="section-tittle">
+        <img src="../../../../../assets/Vector.svg" alt="">
+        <h3>
+          Search Results
+        </h3>
+      </div>
+      <form class="search-input" action="submit">
+        <input type="text" placeholder="Search">
+        <button class="searchbtn" mat-button>
+          Search
+        </button>
+      </form>
+
+      <div class="table-container mat-elevation-z8">
+        <mat-table #table [dataSource]="dataSource">
+          <!-- ERP Number Column -->
+          <ng-container matColumnDef="ERPNumber">
+            <mat-header-cell *matHeaderCellDef> ERP Number </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.ERPNumber}} </mat-cell>
+          </ng-container>
+
+          <!-- State Column -->
+          <ng-container matColumnDef="state">
+            <mat-header-cell *matHeaderCellDef>State </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.state}} </mat-cell>
+          </ng-container>
+
+          <!-- Descriptor Column -->
+          <ng-container matColumnDef="descriptor">
+            <mat-header-cell *matHeaderCellDef>Descriptor </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.descriptor}} </mat-cell>
+          </ng-container>
+
+          <!-- Short Format Description Column -->
+          <ng-container matColumnDef="shortFormatDescription">
+            <mat-header-cell *matHeaderCellDef> Short Format Description </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.shortFormatDescription}} </mat-cell>
+          </ng-container>
+          <!-- PO Description column -->
+          <ng-container matColumnDef="purchaseOrderDescription">
+            <mat-header-cell *matHeaderCellDef> Short Format Description </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.purchaseOrderDescription}} </mat-cell>
+          </ng-container>
+
+          <!-- Date inserted column -->
+          <ng-container matColumnDef="insertedAt">
+            <mat-header-cell *matHeaderCellDef> Created At </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.insertedAt}} </mat-cell>
+          </ng-container>
+
+          <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+          <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+        </mat-table>
       </div>
     </div>
+  </div>
+
+</body>

@@ -1,6 +1,7 @@
 /* nav bar */
 body{
   background-color:#F0FEFF; 
+  overflow: hidden;
 }
 mat-toolbar{
   background-color: #ffffff;

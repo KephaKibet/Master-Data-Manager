@@ -4,6 +4,7 @@ import { MatIconModule } from '@angular/material/icon';
 
 import { MaterialRequestMonitorRoutingModule } from './material-request-monitor-routing.module';
 import { MaterialRequestMonitorComponent } from './components/material-request-monitor/material-request-monitor.component';
+import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
   declarations: [MaterialRequestMonitorComponent],
@@ -11,6 +12,7 @@ import { MaterialRequestMonitorComponent } from './components/material-request-m
     CommonModule,
     MaterialRequestMonitorRoutingModule,
     MatIconModule,
+    MatTableModule
   ]
 })
 export class MaterialRequestMonitorModule { }
