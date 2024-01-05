@@ -15,7 +15,6 @@ const routes: Routes = [
         redirectTo:'/material-catalogue-search',
         pathMatch: 'full',
       },
-  
       {
         path:'material-catalogue-search',
         loadChildren: () => import('./modules/material-catalogue-search/material-catalogue-search.module').then((m) => m.MaterialCatalogueSearchModule)
