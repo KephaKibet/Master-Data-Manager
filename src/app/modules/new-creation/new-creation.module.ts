@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { NewCreationRoutingModule } from './new-creation-routing.module';
 import { NewCreationComponent } from './components/new-creation/new-creation.component';
+import { MatIconModule } from '@angular/material/icon';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { NewCreationComponent } from './components/new-creation/new-creation.com
   ],
   imports: [
     CommonModule,
-    NewCreationRoutingModule
+    NewCreationRoutingModule,
+    MatIconModule
   ]
 })
 export class NewCreationModule { }
