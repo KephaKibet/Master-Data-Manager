@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ELEMENT_DATA } from 'src/app/tableData';
+import { ELEMENT_DATA } from 'src/tableData';
 
 @Component({
   selector: 'app-material-catalogue-search',
