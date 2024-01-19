@@ -7,8 +7,6 @@ import { ELEMENT_DATA } from 'src/tableData';
   styleUrls: ['./material-request-monitor.component.css']
 })
 export class MaterialRequestMonitorComponent {
-  displayedColumns = ['ERPNumber', 'state', 'descriptor', 'shortFormatDescription','purchaseOrderDescription','insertedAt'];
+  displayedColumns = ['ERPNumber', 'state', 'descriptor', 'shortFormatDescription', 'purchaseOrderDescription', 'insertedAt'];
   dataSource = ELEMENT_DATA;
-
-
 }
