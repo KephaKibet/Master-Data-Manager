@@ -1,8 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { MaterialInterface } from 'src/app/shared/interfaces/material.interface';
+import { Component } from '@angular/core';
 import { HttpService } from 'src/app/shared/services/http/httpservice.service';
-import { MaterialService } from 'src/app/shared/services/materials/materials.service';
-import { ELEMENT_DATA } from 'src/tableData';
 import { v4 } from 'uuid';
 
 @Component({
@@ -10,27 +7,28 @@ import { v4 } from 'uuid';
   templateUrl: './material-catalogue-search.component.html',
   styleUrls: ['./material-catalogue-search.component.css']
 })
-export class MaterialCatalogueSearchComponent implements OnInit {
+export class MaterialCatalogueSearchComponent  {
 
-  // data: any[] | undefined;
+  dataSource?: any;
 
-  displayedColumns = ['ERPNumber', 'state', 'descriptor', 'shortFormatDescription','purchaseOrderDescription','insertedAt'];
-  dataSource = ELEMENT_DATA;
+  displayedColumns = ['ERPNumber', 'state', 'descriptor', 'shortFormatDescription', 'purchaseOrderDescription', 'insertedAt'];
 
   constructor(
-    private httpservice: HttpService,
-    // private materialService: MaterialService
-  ) {
-    this.httpservice.get("categories").subscribe(data => {
-    console.log(data);
+    private httpservice: HttpService,)
+  {
+    this.httpservice.get("materials").subscribe(data => {
+      this.dataSource = data;
+      // console.log(data);
     })
-    this.httpservice.post(v4(),"categories", {name:"kepha", materials:"3m"}).subscribe()
- }
-  ngOnInit(): void {
-    // this.materialService.getData().subscribe((data) => {
-    //   this.data = data 
-    //   console.log(this.data);
-    // });
+    this.httpservice.post(v4(), "materials", {
+      ERPNumber: 917210,
+      State: "Active",
+      descriptor: "WRENCH SET, ALLEN",
+      shortFormatDescription: "WRENCH SET ALLN;FUH1473,BALL,1",
+      purchaseOrderDescription: "WRENCH SET, ALLEN; REFERENCE NO: FUH1473, TYPE: BALL, SIZE RANGE: , SET QUANTITY: 12",
+    }).subscribe()
   }
 
+  
 }
+

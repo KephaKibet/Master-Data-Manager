@@ -241,12 +241,12 @@ export class HttpService {
 
   // Existing code...
 
-  private getCurrentUser(): Observable<UserInterface | null> {
-    return of(null);
-    // return this.store.select(selectAuth);
-    // return this.authService.user$.pipe(take(1));
-    // return this.
-  }
+  // private getCurrentUser(): Observable<UserInterface | null> {
+  //   return of(null);
+  //   // return this.store.select(selectAuth);
+  //   // return this.authService.user$.pipe(take(1));
+  //   // return this.
+  // }
 
   destroy$ = new Subject();
 
