@@ -11,6 +11,30 @@
           <mat-icon>add_task</mat-icon> Request Record
         </h3>
       </div>
+      <div>
+        <form class="form-container" [formGroup]="newMaterialForm" (submit)="submitNewMaterial()">
+          <label for="first-name">ERP Number</label>
+          <input class="input" id="erpNumber" type="text" formControlName="ERPNumber">
+
+          <label for="state">State</label>
+          <input class="input" id="state" type="text" formControlName="state"
+            oninput="this.value = this.value.toUpperCase()">
+
+          <label for="descriptor">Descriptor</label>
+          <input class="input" id="descriptor" type="descriptor" formControlName="descriptor"
+            oninput="this.value = this.value.toUpperCase()">
+
+          <label for="shortFormatDescription">Short Format Description</label>
+          <input class="input" id="shortFormatDescription" type="shortFormatDescription"
+            formControlName="shortFormatDescription" oninput="this.value = this.value.toUpperCase()">
+
+          <label for="purchaseOrderDescription">Purchase Order Description</label>
+          <input class="input" id="purchaseOrderDescription" type="purchaseOrderDescription"
+            formControlName="purchaseOrderDescription" oninput="this.value = this.value.toUpperCase()">
+
+          <button id="submit" type="submit" class="submit" [disabled]="!newMaterialForm.valid">Submit</button>
+        </form>
+      </div>
     </div>
   </div>
 </body>

@@ -50,16 +50,15 @@ input{
   box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.2);
   margin-right: 10px;
   border-radius: 3px;
-  overflow-y: auto; /* Enable vertical scrolling for the child */
+  overflow-y: auto;  
   height:87%;
-  padding: 20px; /* Optional: Add padding for better appearance */
+  padding: 20px;  
   box-sizing: border-box;
 
 }
 .table-container{
   height:80%;
   overflow-y: auto;
-  /* box-sizing: border-box; */
 }
 .mat-header-cell {
 position: sticky;

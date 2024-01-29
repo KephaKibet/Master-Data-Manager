@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { NewCreationRoutingModule } from './new-creation-routing.module';
 import { NewCreationComponent } from './components/new-creation/new-creation.component';
 import { MatIconModule } from '@angular/material/icon';
+import { ReactiveFormsModule} from '@angular/forms';
 
 
 @NgModule({
@@ -13,7 +14,7 @@ import { MatIconModule } from '@angular/material/icon';
   imports: [
     CommonModule,
     NewCreationRoutingModule,
-    MatIconModule
+    MatIconModule,ReactiveFormsModule
   ]
 })
 export class NewCreationModule { }

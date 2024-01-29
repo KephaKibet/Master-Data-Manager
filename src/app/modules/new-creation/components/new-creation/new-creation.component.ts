@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { HttpService } from 'src/app/shared/services/http/httpservice.service';
 import { v4 } from 'uuid';
 
@@ -8,20 +9,28 @@ import { v4 } from 'uuid';
   styleUrls: ['./new-creation.component.css']
 })
 export class NewCreationComponent {
-  constructor(
-    private httpservice:HttpService
-  ) {
-  }
+  newMaterialForm = new FormGroup({
+    ERPNumber: new FormControl<string | null>(null,Validators.required),
+    state: new FormControl<string | null>(null,Validators.required),
+    descriptor: new FormControl<string | null>(null,Validators.required),
+    shortFormatDescription: new FormControl<string | null>(null,Validators.required),
+    purchaseOrderDescription: new FormControl<string | null>(null,Validators.required),
+  });
 
-  submit() {
-    this.httpservice.post(v4(), "materials", {
-      ERPNumber: 917210,
-      State: "Active",
-      descriptor: "WRENCH SET, ALLEN",
-      shortFormatDescription: "WRENCH SET ALLN;FUH1473,BALL,1",
-      purchaseOrderDescription: "WRENCH SET, ALLEN; REFERENCE NO: FUH1473, TYPE: BALL, SIZE RANGE: , SET QUANTITY: 12",
-    }).subscribe()
+  constructor(
+    private httpservice: HttpService
+  ) { }
+
+  submitNewMaterial() {
+    if(this.newMaterialForm.valid)
+    {
+      this.httpservice.post(v4(), "materials", {
+      ...this.newMaterialForm.value
+    }).subscribe();
+      console.log(this.newMaterialForm.value);
+    }
   }
 }
+
 
 
