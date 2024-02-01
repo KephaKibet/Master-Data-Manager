@@ -28,6 +28,7 @@ export class NewCreationComponent {
       ...this.newMaterialForm.value
     }).subscribe();
       console.log(this.newMaterialForm.value);
+      this.newMaterialForm.reset();
     }
   }
 }
