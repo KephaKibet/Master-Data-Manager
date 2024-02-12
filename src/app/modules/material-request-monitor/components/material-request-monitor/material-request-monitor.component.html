@@ -20,7 +20,7 @@
         </button>
       </form>
 
-      <div class="table-container mat-elevation-z8">
+      <div class="table-container">
         <mat-table #table [dataSource]="dataSource">
           <!-- ERP Number Column -->
           <ng-container matColumnDef="ERPNumber">
@@ -54,14 +54,13 @@
           <!-- Date inserted column -->
           <ng-container matColumnDef="insertedAt">
             <mat-header-cell *matHeaderCellDef> Created At </mat-header-cell>
-            <mat-cell *matCellDef="let element"> {{element.insertedAt}} </mat-cell>
+            <mat-cell *matCellDef="let element"> {{element.createdAt}} </mat-cell>
           </ng-container>
 
           <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-          <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+          <mat-row *matRowDef="let row; columns: displayedColumns;" (click)="showOptions()"></mat-row>
         </mat-table>
       </div>
     </div>
   </div>
-
 </body>

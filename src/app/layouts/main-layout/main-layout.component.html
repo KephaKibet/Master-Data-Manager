@@ -9,21 +9,35 @@
   <a mat-button routerLink="/tasks">
     <mat-icon class="mat-icon">view_list</mat-icon>
   </a>
-  <a mat-button routerLink="/get-started">
+  <a matTooltip="Info about the action" mat-button routerLink="/get-started">
+    <i matTooltip="This is simple Tooltip"></i>
     <mat-icon class="mat-icon">info</mat-icon>
   </a>
-  <a mat-button routerLink="/notifications">
+  <a class="hover-anchor" [satPopoverAnchor]="p" (mouseenter)="p.open()" mat-button routerLink="/notifications"
+    [satPopoverAnchor]="p" (mouseenter)="p.open()" (mouseleave)="p.close()">
+    <i>Add your Tooltip here</i>
     <mat-icon class="mat-icon">notifications</mat-icon>
   </a>
   <a mat-button routerLink="/account-settings">
     account settings
   </a>
 
+  <div class="hover-anchor" [satPopoverAnchor]="p" (mouseenter)="p.open()">
+    Hover me
+  </div>
+  <sat-popover #p horizontalAlign="after" hasBackdrop>
+    <div class="tooltip-wrapper">
+      Multi-line <br />
+      <i>Add your Tooltip here</i>
+      <br />
+    </div>
+  </sat-popover>
+
 </mat-toolbar>
 
 <!-- sidebar -->
 <ul>
-  <li><a routerLinkActive="active" routerLink="/material-catalogue-search">
+  <li><a routerLink="/material-catalogue-search" [routerLinkActive]="['active']">
       <span>
         <mat-icon class="nav-icon">search</mat-icon>
       </span>
@@ -31,14 +45,14 @@
     </a>
   </li>
 
-  <li><a routerLink="/request-monitor">
+  <li><a routerLink="/request-monitor" routerLinkActive="active">
       <span>
         <mat-icon class="nav-icon">query_stats</mat-icon>
       </span>
       <span> Material Request Monitor</span>
     </a>
   </li>
-  <li><a routerLink="/material-creation">
+  <li><a routerLink="/material-creation" routerLinkActive="active">
       <span>
         <mat-icon class="nav-icon">add_task</mat-icon>
       </span>

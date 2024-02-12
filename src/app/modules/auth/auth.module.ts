@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MatCardModule } from '@angular/material/card';
 import { ReactiveFormsModule } from '@angular/forms';
 
 
@@ -9,7 +8,6 @@ import { ReactiveFormsModule } from '@angular/forms';
   declarations: [],
   imports: [
     CommonModule,
-    MatCardModule,
     ReactiveFormsModule
   ]
 })

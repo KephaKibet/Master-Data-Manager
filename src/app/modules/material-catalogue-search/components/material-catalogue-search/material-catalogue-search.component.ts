@@ -1,34 +1,47 @@
 import { Component } from '@angular/core';
-import { HttpService } from 'src/app/shared/services/http/httpservice.service';
-import { v4 } from 'uuid';
+import { MaterialInterface } from 'src/app/shared/interfaces/material.interface';
+import { MatDialog } from  '@angular/material/dialog';
+
+
 
 @Component({
   selector: 'app-material-catalogue-search',
   templateUrl: './material-catalogue-search.component.html',
   styleUrls: ['./material-catalogue-search.component.css']
 })
-export class MaterialCatalogueSearchComponent  {
-
+export class MaterialCatalogueSearchComponent {
   dataSource?: any;
-
   displayedColumns = ['ERPNumber', 'state', 'descriptor', 'shortFormatDescription', 'purchaseOrderDescription', 'insertedAt'];
-
-  constructor(
-    private httpservice: HttpService,)
-  {
-    this.httpservice.get("materials").subscribe(data => {
-      this.dataSource = data;
-      // console.log(data);
-    })
-    this.httpservice.post(v4(), "materials", {
-      ERPNumber: 917210,
-      State: "Active",
-      descriptor: "WRENCH SET, ALLEN",
-      shortFormatDescription: "WRENCH SET ALLN;FUH1473,BALL,1",
-      purchaseOrderDescription: "WRENCH SET, ALLEN; REFERENCE NO: FUH1473, TYPE: BALL, SIZE RANGE: , SET QUANTITY: 12",
-    }).subscribe()
   }
+  // searchTerm = new BehaviorSubject<string | null>(null);
+  // from movie service
+  // searchMovie(searchTerm:string): Observable<SearchedMovieInterface[]> {
+  //   const url = 'https://www.omdbapi.com';
+  //   const params = {
+  //     s: searchTerm,
+  //     apikey: 'f91ddec1'
+  //   };
 
-  
-}
+  // return new Observable<SearchedMovieInterface[]>((subscriber)=>{
+  //   this.httpClient.get(url, { params }).pipe(take(1)).subscribe((response:any) => {
+  //     const movies = response['Search'] as SearchedMovieInterface[]; // Assuming the response has a 'Search' property containing the movies
+  //     subscriber.next(movies)
+  //   });
+
+  // })
+  // }
+
+
+//   search(event:any){
+//     const searchTerm = event.value;
+//     this.searchMaterials(searchTerm)
+//     console.log(searchTerm);
+//   }
+
+
+
+
+
+
+// }
 

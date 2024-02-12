@@ -55,14 +55,14 @@ ul{
   margin-bottom: 24px;
   margin-top: 5px;
  }
- a:hover, a:active{
+ .active{
   background-color:#595884;
   color: rgb(255, 255, 255);
   border-radius: 10%;
-  max-width: 85%;
+  /* max-width: 95%; */
   margin-left: 3px;
-  transform: scale(115%);
-  transition: cubic-bezier(0.6,1, 0.98, 0.335);
+  /* transform: scale(115%); */
+  /* transition: cubic-bezier(0.6,1, 0.98, 0.335); */
  
  }
 
